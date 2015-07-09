@@ -59,10 +59,4 @@ public class MyService extends Service{
 		handler.removeCallbacks(thread);
 		super.onDestroy();
 	}
-	
-	
-	
-	
-	
-
 }

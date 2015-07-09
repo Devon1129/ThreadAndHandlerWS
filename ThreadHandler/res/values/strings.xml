@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ThreadHandler</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button_name">獲取圖片</string>
+    <string name="thread_started">獲取圖片成功</string>
+	<string name="get_pic_failure">失敗</string>
+</resources>
