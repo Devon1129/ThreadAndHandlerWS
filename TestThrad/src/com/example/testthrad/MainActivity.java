@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub
-			//Εγ¥άµe­±°Κ§@.
+			//ι΅―η¤Ίη•«ιΆε‹•δ½.
 		}
     };
 
