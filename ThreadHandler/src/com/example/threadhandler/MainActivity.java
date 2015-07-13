@@ -50,14 +50,11 @@ public class MainActivity extends Activity {
 				Date curDate = new Date();
 				String time = curDate.toString();
 				tv.setText(time);
-				
 			}
-        	
         });
        
         mButton.setOnClickListener(new OnClickListener() {
 
-        	//Q:mThread == null?
 			@Override
 			public void onClick(View v) {
 				 if(mThread == null) {					 
@@ -117,10 +114,12 @@ public class MainActivity extends Activity {
         rSetImg.run();
 	}
     
-    Runnable rSetImg = new Runnable() {//另外一种更简洁的发送消息给ui线程的方法。  
+    //另外一种更简洁的发送消息给ui线程的方法。  
+    Runnable rSetImg = new Runnable() {
         
 		@Override  
-		public void run() {//run()方法会在ui线程执行  
+		//run()方法会在ui线程执行
+		public void run() {  
 			mImageView.setImageBitmap(mBitmap);
 			mButton.setEnabled(true);
 			mThread = null;
@@ -148,7 +147,7 @@ public class MainActivity extends Activity {
                 return;  
              }  
             //獲取圖片成功，向ui線程發送MSG_SUCCESS標誌和bitmap對象。
-//            mHandler.obtainMessage(MSG_SUCCESS,bm).sendToTarget();
+//          mHandler.obtainMessage(MSG_SUCCESS,bm).sendToTarget();
 //		    mImageView.setImageBitmap(bm); //出错！不能在非 ui线程操作 ui元素  
     
 //		    mImageView.post(new Runnable() {//另外一种更简洁的发送消息给ui线程的方法。  
@@ -163,9 +162,6 @@ public class MainActivity extends Activity {
 	         mImageView.post(rSetImg);
 		}  
     };
-    
-
-
     
 	 private Handler mHandler = new Handler(){
 		 public void handleMessage(Message msg){//此方法在 ui線程運行.

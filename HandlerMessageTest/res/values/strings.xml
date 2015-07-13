@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HandlerMessageTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btn1">使用 Message.Obtain + Handler.sendMessage()發送消息</string>
+	<string name="btn2">使用 Message.sendToTarget發送消息</string>
+	<string name="btn3">發送一個延遲空消息</string>
+	<string name="btn4">用 Handler.sendMessage發送延遲消息</string>
+	<string name="btn5">發送延遲空消息</string>
+</resources>
